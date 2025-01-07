@@ -30,9 +30,16 @@ SELECT COUNT(`id`) FROM `departments`;
 
 SELECT COUNT(`id`) FROM `teachers` WHERE `phone` IS NULL;
 
-9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
-   degree_id, inserire un valore casuale)
+**9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo degree_id, inserire un valore casuale)**
 
-10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126
+INSERT INTO `university`.`students` (`degree_id`, `name`, `surname`, `date_of_birth`, `fiscal_code`, `enrolment_date`, `registration_number`, `email`) VALUES ('70', 'Francesca', 'Romagnoli', '1995-09-04', 'RSSMRA85M01H501Z', '2024-09-11', '424242', 'wanda.maximoff@nexus.com');
 
-11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9
+**10. Cambiare il numero dell’ufficio del professor Pietro Rizzo in 126**
+
+SELECT \* FROM `teachers`WHERE `name` = 'pietro' AND `surname` = 'rizzo';
+UPDATE `teachers` SET `office_number` = '126' WHERE `id` = '58';
+
+**11. Eliminare dalla tabella studenti il record creato precedentemente al punto 9**
+
+SELECT \* FROM `students` WHERE `name` = 'Francesca' AND `surname` = 'Romagnoli';
+DELETE FROM `students` WHERE `id` = '5001';
