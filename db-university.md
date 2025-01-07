@@ -22,9 +22,13 @@ SELECT COUNT(`id`) FROM `exams`WHERE`hour`>= '14:00:00' AND`date` = '2020-06-20'
 
 SELECT COUNT(`id`) FROM `degrees` WHERE `level` = 'magistrale';
 
-7. Da quanti dipartimenti è composta l'università? (12)
+**7. Da quanti dipartimenti è composta l'università? (12)**
 
-8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)
+SELECT COUNT(`id`) FROM `departments`;
+
+**8. Quanti sono gli insegnanti che non hanno un numero di telefono? (50)**
+
+SELECT COUNT(`id`) FROM `teachers` WHERE `phone` IS NULL;
 
 9. Inserire nella tabella degli studenti un nuovo record con i propri dati (per il campo
    degree_id, inserire un valore casuale)
